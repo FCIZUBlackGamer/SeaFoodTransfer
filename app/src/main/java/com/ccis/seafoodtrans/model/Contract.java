@@ -6,6 +6,7 @@ public class Contract {
     String end_date;
     String subject;
     String user_name;
+    String active;
 
     public String getId() {
         return id;
@@ -45,5 +46,13 @@ public class Contract {
 
     public void setUser_name(String user_name) {
         this.user_name = user_name;
+    }
+
+    public void setActive(String active) {
+        this.active = active;
+    }
+
+    public String getActive() {
+        return active;
     }
 }

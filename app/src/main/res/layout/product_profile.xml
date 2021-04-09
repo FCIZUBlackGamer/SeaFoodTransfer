@@ -1,121 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="2dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Name:"
-        app:layout_constraintStart_toStartOf="@+id/productImg"
-        app:layout_constraintTop_toBottomOf="@+id/productImg" />
+    <data>
 
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Weight:"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </data>
 
-    <TextView
-        android:id="@+id/tv3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Price:"
-        app:layout_constraintStart_toStartOf="@+id/tv2"
-        app:layout_constraintTop_toBottomOf="@+id/tv2" />
-
-    <TextView
-        android:id="@+id/tv4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Fishing date:"
-        app:layout_constraintStart_toStartOf="@+id/tv3"
-        app:layout_constraintTop_toBottomOf="@+id/tv3" />
-
-    <ImageView
-        android:id="@+id/productImg"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginBottom="16dp"
-        android:src="@mipmap/ic_launcher"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/productnameTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fish name"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/weightTv"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/weightTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Weight"
-        app:layout_constraintStart_toStartOf="@+id/priceTv"
-        app:layout_constraintTop_toBottomOf="@+id/productnameTv" />
-
-    <TextView
-        android:id="@+id/priceTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Price"
-        app:layout_constraintStart_toStartOf="@+id/dateTv"
-        app:layout_constraintTop_toBottomOf="@+id/weightTv" />
-
-    <TextView
-        android:id="@+id/dateTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Fishing date"
-        app:layout_constraintStart_toEndOf="@+id/tv4"
-        app:layout_constraintTop_toBottomOf="@+id/priceTv" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameTIL"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="@string/leave_a_comment"
-        app:errorEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/tv4">
+        android:layout_marginBottom="2dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameEditText"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Name:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/productImg"
+            app:layout_constraintTop_toBottomOf="@+id/productImg" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Weight:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Price:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv2"
+            app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Fishing date:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv3"
+            app:layout_constraintTop_toBottomOf="@+id/tv3" />
+
+        <ImageView
+            android:id="@+id/productImg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/productnameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fish name"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/weightTv"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/weightTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Weight"
+            app:layout_constraintStart_toStartOf="@+id/priceTv"
+            app:layout_constraintTop_toBottomOf="@+id/productnameTv" />
+
+        <TextView
+            android:id="@+id/priceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Price"
+            app:layout_constraintStart_toStartOf="@+id/dateTv"
+            app:layout_constraintTop_toBottomOf="@+id/weightTv" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Fishing date"
+            app:layout_constraintStart_toEndOf="@+id/tv4"
+            app:layout_constraintTop_toBottomOf="@+id/priceTv" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameTIL"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:textColorHint="@color/colorAccent"
-            android:textSize="15sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_margin="8dp"
+            android:hint="@string/leave_a_comment"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/tv4">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/okBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/send"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="@+id/nameTIL"
-        app:layout_constraintEnd_toEndOf="@+id/nameTIL"
-        app:layout_constraintTop_toBottomOf="@+id/nameTIL" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/colorAccent"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/okBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/nameTIL"
+            app:layout_constraintEnd_toEndOf="@+id/nameTIL"
+            app:layout_constraintTop_toBottomOf="@+id/nameTIL" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

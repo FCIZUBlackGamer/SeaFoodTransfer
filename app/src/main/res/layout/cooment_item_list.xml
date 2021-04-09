@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/client_nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Client Name:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/commentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingEnd="20dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="10"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@id/client_nameTv"
+            app:layout_constraintEnd_toStartOf="@+id/textViewOptions"
+            app:layout_constraintStart_toEndOf="@+id/client_nameTv"
+            app:layout_constraintTop_toTopOf="@+id/client_nameTv" />
+
+        <TextView
+            android:id="@+id/textViewOptions"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginEnd="8dp"
+            android:text="@string/_8942"
+            android:textAppearance="?android:textAppearanceLarge"
+            app:layout_constraintBottom_toBottomOf="@+id/client_nameTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/client_nameTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

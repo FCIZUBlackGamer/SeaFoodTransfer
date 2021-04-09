@@ -11,9 +11,8 @@ import java.util.Set;
 public class PreferenceController {
     private static final String DATABASE_NAME = "RSDApp";
     public static final String LANGUAGE = "lang";
-    public static final String UNIT_LIST = "unitList";
-    public static final String ERROR_RESULT_LIST_LIST = "errorResultList";
-    public static final String ERROR_RESPONSE_CODE_LIST = "errorResponseCodeList";
+    public static final String PREF_USER_ID = "userId";
+    public static final String PREF_USER_TYPE = "type";
     private static PreferenceController instance;
     private SharedPreferences preferences;
 

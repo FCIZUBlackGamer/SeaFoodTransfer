@@ -76,8 +76,8 @@ public class LiveBarcodeFragment extends Fragment {
     };
 
 
-    public static void setFlag(int flag) {
-        currentFlag = flag;
+    public static LiveBarcodeFragment newInstance() {
+        return new LiveBarcodeFragment();
     }
 
 
@@ -105,13 +105,14 @@ public class LiveBarcodeFragment extends Fragment {
             @Override
             public void onChanged(Barcode barcode) {
                 if (barcode != null) {
-                    ArrayList<BarcodeField> barcodeFieldList = new ArrayList<BarcodeField>();
-                    barcodeFieldList.add(new BarcodeField(getString(R.string.app_name), barcode.getRawValue() + ""));
+//                    ArrayList<BarcodeField> barcodeFieldList = new ArrayList<BarcodeField>();
+//                    barcodeFieldList.add(new BarcodeField(getString(R.string.app_name), barcode.getRawValue() + ""));
                     Log.d("Raw Value", barcode.getRawValue() + "");
-                    EventBus.getDefault().post(barcode.getRawValue());
-                    BarcodeResultFragment.show(requireActivity().getSupportFragmentManager(), barcodeFieldList);
-                    Log.e("unitList", barcode.getRawValue() + "");
-
+                    EventBus.getDefault().post("\""+barcode.getRawValue()+"\"");
+//                    BarcodeResultFragment barcodeResultFragment = new BarcodeResultFragment();
+//
+//                    barcodeResultFragment.show(requireActivity().getSupportFragmentManager(), barcodeFieldList);
+                    //call searchBarcode method from viewmodel
 
                 }
             }

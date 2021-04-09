@@ -5,14 +5,17 @@ public class API {
 
     final public static String REGISTER_URL = BASE_URL + "UserRegister.php";
     final public static String LOGIN_URL = BASE_URL + "Login.php";
+    final public static String UPDATE_PROFILE_URL = BASE_URL + "UpdateProfile.php";
     //region Add
     final public static String ADD_PRODUCT_URL = BASE_URL + "Product/Add.php";
+    final public static String ADD_PRODUCT_IMAGE_URL = BASE_URL + "Product/UploadImage.php";
     final public static String ADD_COMMENT_URL = BASE_URL + "Comment/Add.php";
     final public static String ADD_TRANSFER_URL = BASE_URL + "Transfer/Add.php";
     final public static String ADD_CONTRACT_URL = BASE_URL + "Contract/Add.php";
     //endregion
     //region List
     final public static String LIST_PRODUCT_URL = BASE_URL + "Product/List.php";
+    final public static String SEARCH_BARCODE_PRODUCT_URL = BASE_URL + "Product/SearchBarcode.php";
     final public static String LIST_COMMENT_URL = BASE_URL + "Comment/List.php";
     final public static String LIST_TRANSFER_URL = BASE_URL + "Transfer/List.php";
     final public static String LIST_CONTRACT_URL = BASE_URL + "Contract/List.php";
@@ -25,12 +28,14 @@ public class API {
     final public static String UPDATE_PRODUCT_URL = BASE_URL + "Product/Update.php";
     final public static String UPDATE_TRANSFER_URL = BASE_URL + "Transfer/Update.php";
     final public static String UPDATE_CONTRACT_URL = BASE_URL + "Contract/Update.php";
+    final public static String UPDATE_CONTRACT_STATUS_URL = BASE_URL + "Contract/UpdateStatus.php";
     //endregion
     //region Delete
     final public static String DELETE_PRODUCT_URL = BASE_URL + "Product/Delete.php";
     final public static String DELETE_COMMENT_URL = BASE_URL + "Comment/Delete.php";
     final public static String DELETE_TRANSFER_URL = BASE_URL + "Transfer/Delete.php";
     final public static String DELETE_CONTRACT_URL = BASE_URL + "Contract/Delete.php";
+    final public static String DELETE_USER_URL = BASE_URL + "Users/DeleteUser.php";
     //endregion
 
 }

@@ -64,13 +64,13 @@ public final class BarcodeResultFragment extends DialogFragment {
         super.onDismiss(dialogInterface);
     }
 
-    public static final void show(@NotNull FragmentManager fragmentManager, @NotNull ArrayList barcodeFieldArrayList) {
-        BarcodeResultFragment barcodeResultFragment = new BarcodeResultFragment();
-        Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList(ARG_BARCODE_FIELD_LIST, barcodeFieldArrayList);
-        barcodeResultFragment.setArguments(bundle);
-        barcodeResultFragment.show(fragmentManager, "BarcodeResultFragment");
-    }
+//    public static final void show(@NotNull FragmentManager fragmentManager, @NotNull ArrayList barcodeFieldArrayList) {
+//        BarcodeResultFragment barcodeResultFragment = new BarcodeResultFragment();
+//        Bundle bundle = new Bundle();
+//        bundle.putParcelableArrayList(ARG_BARCODE_FIELD_LIST, barcodeFieldArrayList);
+//        barcodeResultFragment.setArguments(bundle);
+//        barcodeResultFragment.show(fragmentManager, "BarcodeResultFragment");
+//    }
 
     public static final void dismiss(@NotNull FragmentManager fragmentManager) {
         BarcodeResultFragment resultFragment = (BarcodeResultFragment)fragmentManager.findFragmentByTag(TAG);

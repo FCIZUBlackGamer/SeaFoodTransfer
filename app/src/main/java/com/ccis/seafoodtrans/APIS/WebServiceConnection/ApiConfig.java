@@ -17,24 +17,41 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Query;
 
 public interface ApiConfig {
 
     @FormUrlEncoded
     @POST(API.LOGIN_URL)
-    Call<String> login(@Field("email") String email, @Field("password") String password);
+    Call<ListUser> login(@Field("email") String email, @Field("password") String password);
 
     @FormUrlEncoded
     @POST(API.REGISTER_URL)
     Call<String> register(@Field("email") String email, @Field("password") String password, @Field("name") String name, @Field("phone") String phone, @Field("type") String type);
 
-    @Multipart
+    @FormUrlEncoded
+    @POST(API.UPDATE_PROFILE_URL)
+    Call<String> updateProfile(@Field("id") String id, @Field("name") String name, @Field("phone") String phone, @Field("type") String type);
+
+    @FormUrlEncoded
+    @POST(API.DELETE_USER_URL)
+    Call<String> deleteUser(@Field("id") String id);
+
+    @FormUrlEncoded
     @POST(API.ADD_PRODUCT_URL)
-    Call<String> addProduct(@Field("name") String name, @Field("price") String price, @Field("barcode") String barcode,@Field("weight") String weight, @Field("amount") String amount, @Field("fishing_date") String fishing_date, @Field("fisherman_id") String fisherman_id, @Part MultipartBody.Part file, @Part("name") RequestBody image_name);
+    Call<String> addProduct(@Field("name") String name, @Field("price") String price, @Field("barcode") String barcode, @Field("weight") String weight, @Field("amount") String amount, @Field("fishing_date") String fishing_date, @Field("fisherman_id") String fisherman_id, @Field("file_name") String file_name);
+
+    @Multipart
+    @POST(API.ADD_PRODUCT_IMAGE_URL)
+    Call<String> uploadImage(@Part MultipartBody.Part image, @Part("file") RequestBody file_name);
+
+    @FormUrlEncoded
+    @POST(API.ADD_PRODUCT_URL)
+    Call<String> addProduct(@Field("name") String name, @Field("price") String price, @Field("barcode") String barcode,@Field("weight") String weight, @Field("amount") String amount, @Field("fishing_date") String fishing_date, @Field("fisherman_id") String fisherman_id);
 
     @FormUrlEncoded
     @POST(API.ADD_COMMENT_URL)
-    Call<String> addComment(@Field("subject") String subject, @Field("client_id") String client_id);
+    Call<String> addComment(@Field("subject") String subject, @Field("client_id") String client_id, @Field("product_id") String product_id);
 
     @FormUrlEncoded
     @POST(API.ADD_CONTRACT_URL)
@@ -54,12 +71,20 @@ public interface ApiConfig {
     Call<String> updateContract(@Field("id") String id, @Field("start_date") String start_date, @Field("end_date") String end_date, @Field("subject") String subject, @Field("user_id") String user_id);
 
     @FormUrlEncoded
+    @POST(API.UPDATE_CONTRACT_STATUS_URL)
+    Call<String> updateContractStatus(@Field("id") String id, @Field("active") String active);
+
+    @FormUrlEncoded
     @POST(API.UPDATE_TRANSFER_URL)
-    Call<String> updateTransfer(@Field("id") String id,@Field("product_id") String product_id, @Field("amount") String amount, @Field("client_id") String client_id);
+    Call<String> updateTransfer(@Field("id") String id,@Field("status") String status);
 
     @FormUrlEncoded
     @POST(API.LIST_PRODUCT_URL)
     Call<ListProduct> listProduct(@Field("id") String id);
+
+    @FormUrlEncoded
+    @POST(API.SEARCH_BARCODE_PRODUCT_URL)
+    Call<ListProduct> searchBarcode(@Field("id") String id);
 
     /*
     	if ($id == "0") {
@@ -89,13 +114,13 @@ public interface ApiConfig {
 
 
     * */
-    @FormUrlEncoded
+
     @POST(API.LIST_ALL_USERS_CONTRACT_URL)
     Call<ListUser> listAllUsers();
-    @FormUrlEncoded
+
     @POST(API.LIST_CLIENTS_URL)
     Call<ListUser> listClients();
-    @FormUrlEncoded
+
     @POST(API.LIST_FISHERMEN_URL)
     Call<ListUser> listFishermen();
 

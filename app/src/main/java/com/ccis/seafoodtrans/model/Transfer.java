@@ -1,11 +1,12 @@
 package com.ccis.seafoodtrans.model;
 
+import java.util.List;
+
 public class Transfer {
     String id;
-    String name; //productName
-    String amount;
     String user_name;
-    String type;
+    String status;
+    List<TransferItems> items;
 
     public String getId() {
         return id;
@@ -13,22 +14,6 @@ public class Transfer {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAmount() {
-        return amount;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
     }
 
     public String getUser_name() {
@@ -39,11 +24,19 @@ public class Transfer {
         this.user_name = user_name;
     }
 
-    public String getType() {
-        return type;
+    public String getStatus() {
+        return status;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setItems(List<TransferItems> items) {
+        this.items = items;
+    }
+
+    public List<TransferItems> getItems() {
+        return items;
     }
 }
