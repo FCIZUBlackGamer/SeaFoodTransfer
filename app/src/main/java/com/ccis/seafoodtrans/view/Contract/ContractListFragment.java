@@ -71,6 +71,7 @@ public class ContractListFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        binding.fab.setVisibility(View.GONE);
         model.listContract(PreferenceController.getInstance(requireActivity()).get(PreferenceController.PREF_USER_ID)).observe(getViewLifecycleOwner(), new Observer<ListContract>() {
             @Override
             public void onChanged(ListContract listContract) {

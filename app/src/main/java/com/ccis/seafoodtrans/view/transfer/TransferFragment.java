@@ -63,6 +63,7 @@ public class TransferFragment extends Fragment {
                 }
             });
         } else {
+            binding.fab.setVisibility(View.GONE);
             model.listTransfer(PreferenceController.getInstance(requireContext()).get(PreferenceController.PREF_USER_ID)).observe(requireActivity(), new Observer<ListTransfer>() {
                 @Override
                 public void onChanged(ListTransfer listTransfer) {

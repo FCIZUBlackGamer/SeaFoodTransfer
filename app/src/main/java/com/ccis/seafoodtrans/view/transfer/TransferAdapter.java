@@ -78,7 +78,7 @@ public class TransferAdapter extends RecyclerView.Adapter<TransferAdapter.Vholde
         } else {
             binding.textViewOptions.setVisibility(View.VISIBLE);
         }
-        if (user.toLowerCase().equals("client")){
+        if (user.toLowerCase().equals("client") && !list.get(position).getStatus().equals("Received")){
             binding.linCon.setVisibility(View.VISIBLE);
         }
 
